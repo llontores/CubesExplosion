@@ -32,7 +32,7 @@ public class Cube : MonoBehaviour
         }
     }
 
-    public void SetDevisionChanse(float divisionChanse)
+    public void Init(float divisionChanse)
     {
         _startDivisionChanse = divisionChanse;
     }

@@ -16,8 +16,10 @@ public class CubesSpawner : MonoBehaviour
         for (int i = 0; i < cubesAmount; i++)
         {
             Cube spawnedCube = Instantiate(cube, transform.position, Quaternion.identity);
-            spawnedCube.SetDevisionChanse(chanse);
+            CubeExploder spawnedCubeExploder = spawnedCube.GetComponent<CubeExploder>();
+            spawnedCube.Init(chanse);
             spawnedCube.gameObject.transform.localScale = transform.localScale / _scaleDivider;
+            spawnedCubeExploder.Init();
             cubes.Add(spawnedCube);
         }
         
